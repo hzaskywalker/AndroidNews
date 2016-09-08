@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/menu_background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/p0"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/menu_list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_background"
+        android:background="#000000">
+
+        <LinearLayout
+            android:id="@+id/favorites"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_line_height"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="192dp"
+                android:layout_height="match_parent"
+                android:text="@string/favoriates"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_weight="0.35" />
+
+            <ImageView
+                android:layout_width="@dimen/menu_line_height"
+                android:layout_height="@dimen/menu_line_height"
+                android:layout_marginRight="@dimen/menu_line_height"
+                android:background="@drawable/favorite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/category_manager"
+            android:layout_width="320dp"
+            android:layout_height="@dimen/menu_line_height"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="192dp"
+                android:layout_height="match_parent"
+                android:text="@string/category_manager"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_weight="0.35" />
+
+            <ImageView
+                android:layout_width="@dimen/menu_line_height"
+                android:layout_height="@dimen/menu_line_height"
+                android:layout_marginRight="@dimen/menu_line_height"
+                android:background="@drawable/category"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutme"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_line_height"
+            android:orientation="horizontal"
+            android:background="#000000"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="192dp"
+                android:layout_height="match_parent"
+                android:text="@string/about_me"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:layout_weight="0.35" />
+            <ImageView
+                android:layout_width="@dimen/menu_line_height"
+                android:layout_height="@dimen/menu_line_height"
+                android:layout_marginRight="@dimen/menu_line_height"
+                android:background="@drawable/ic_stat_name"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
