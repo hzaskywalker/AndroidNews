@@ -118,6 +118,10 @@ public class NewsListFragment extends Fragment {
             }
             else
                 holder = (ViewHolder)view.getTag();
+            if(piece == null){
+                holder.title.setText("啥都没有");
+                return view;
+            }
 
             if(holder.thread!=null && holder.a!=piece) {
                 holder.thread.interrupt();
@@ -166,7 +170,6 @@ public class NewsListFragment extends Fragment {
     public View refresh(){
         update(null);
         listView = (ListView) inflater.inflate(R.layout.news_list_layout, container, false);
-        ArrayList<View> list = new ArrayList<>();
         adapter = new ListViewAdapter(this.getContext());
         listView.setAdapter(adapter);
         listView.setOnScrollListener(
@@ -174,10 +177,17 @@ public class NewsListFragment extends Fragment {
                     @Override
                     public void onScrollStateChanged(AbsListView absListView, int scrollState) {
                         if (scrollState == SCROLL_STATE_IDLE || scrollState == SCROLL_STATE_FLING) {
+
+                            Log.e("onScrollStateChanged", "123");
                             if (isScrollToBottom && !isLoadingMore) {
                                 isLoadingMore = true;
                                 listView.setSelection(listView.getCount());
-                                String lastTime = news.get(news.size()-1).news_id.toString();
+                                New tmp = news.get(news.size()-1);
+                                String lastTime;
+                                if(tmp == null)
+                                    lastTime = null;
+                                else
+                                    lastTime = tmp.news_id.toString();
                                 Log.d("what", "加载更多.." + " " + lastTime);
                                 update(lastTime);
                                 isLoadingMore = false;
@@ -191,7 +201,8 @@ public class NewsListFragment extends Fragment {
 
                     @Override
                     public void onScroll(AbsListView absListView, int i, int i1, int totalItemCount) {
-                        if (listView.getLastVisiblePosition() == totalItemCount - 1) {
+                        int ans = listView.getLastVisiblePosition();
+                        if ( ans == totalItemCount - 1 && ans!=0) {
                             isScrollToBottom = true;
                         } else {
                             isScrollToBottom = false;
@@ -234,6 +245,9 @@ public class NewsListFragment extends Fragment {
                 Log.d("updated", ""+ map.size());
                 news = getSortedArray(map);
                 Log.d("updated", getActivity().toString());
+                if(news.size() == 0){
+                    news.add(null);
+                }
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
