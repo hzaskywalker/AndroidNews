@@ -58,7 +58,6 @@ public class CategoryManager extends AppCompatActivity {
                             a.fragment = null;
                         }
                         MainActivity.viewPagerAdapter = null;
-                        genLayout();
                     }
                 }
         );
@@ -116,7 +115,7 @@ public class CategoryManager extends AppCompatActivity {
             }
             for (int i = 0; i < title.size(); ++i) {
 
-                if (watched.get(i) == iswached) {
+                if (liked.get(i) == iswached) {
                     LinearLayout linearLayout = new LinearLayout(this);
                     linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -132,6 +131,8 @@ public class CategoryManager extends AppCompatActivity {
                                 @Override
                                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                                     liked.set(c, b);
+                                    Log.e("genlayout", "haha");
+                                    genLayout();
                                 }
                             }
                     );
