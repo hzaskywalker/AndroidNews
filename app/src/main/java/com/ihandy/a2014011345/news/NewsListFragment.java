@@ -36,6 +36,11 @@ import java.util.zip.Inflater;
  */
 
 public class NewsListFragment extends Fragment {
+    /**
+     * 主界面显示的一个新闻列表
+     * 作为viewadapter的一个部分。
+     * 核心是一个listview
+     */
     LayoutInflater inflater;
     ViewGroup container;
     ListView listView;

@@ -21,6 +21,9 @@ import java.util.Map;
  * Created by hza on 16/9/5.
  */
 public class Database extends SQLiteOpenHelper {
+    /**
+     * 一个简单的数据库,用于存放分类信息。
+     */
     // If you change the database schema, you must increment the database version.
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "category.db";

@@ -20,6 +20,10 @@ import java.util.ArrayList;
  */
 
 class MenuList{
+    /**
+     * 侧边栏的按钮。
+     * 跳到其它activity
+     */
     LinearLayout layout;
 
     LinearLayout favor, category_manager, aboutme;
@@ -67,6 +71,9 @@ class MenuList{
 }
 
 public class MenuLeft{
+    /**
+     * 利用drawerlaout绘制侧边栏。
+     */
     Button button;
 
     DrawerLayout drawerLayout;

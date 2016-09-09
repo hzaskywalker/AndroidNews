@@ -14,6 +14,9 @@ import java.net.URL;
  * Created by hza on 16/9/4.
  */
 class URLHandler{
+    /**
+     * 根据url获得指定内容。
+     */
     private String content;
     public String urlpath;
     protected String getContentByUrl(String path)throws IOException {

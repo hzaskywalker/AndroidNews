@@ -20,6 +20,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
+    /**
+     * 主界面,管理新闻列表的显示与获取。
+     */
     CategoryGetter categoryGetter;
     static ArrayList<NewsList> newsLists;
     static HashMap<String, New> favoredNew;

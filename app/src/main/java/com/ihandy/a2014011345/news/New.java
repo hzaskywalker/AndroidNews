@@ -23,7 +23,10 @@ import java.net.URL;
  * Created by hza on 16/9/4.
  */
 public class New implements Serializable {
-
+    /**
+     * 一条新闻
+     * 包括新闻的图片的获取。
+     */
     public String categories, country, locale_category, origin;
     public String source_name, source_url, img_url;
     public String title;

@@ -34,6 +34,10 @@ import static android.database.sqlite.SQLiteDatabase.openDatabase;
  */
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+    /**
+     * ViewPagerAdapter
+     * 控制tab和新闻列表的相关内容。
+     */
     public ArrayList<NewsList> viewLists;
     ViewPager viewPager;
 

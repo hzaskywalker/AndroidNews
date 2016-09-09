@@ -15,6 +15,9 @@ import java.util.Map;
  * Created by hza on 16/9/4.
  */
 public class CategoryGetter{
+    /**
+     * 根据URL获取新闻分类信息
+     */
     public URLHandler urlHandler;
     public Map<String, String> categories;
 

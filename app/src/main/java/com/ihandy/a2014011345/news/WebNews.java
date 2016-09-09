@@ -29,6 +29,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class WebNews extends AppCompatActivity {
+    /**
+     * 浏览网页的activity
+     * 包括分享和收藏。
+     */
     WebView webView;
     String urlpath;
     String news_id;

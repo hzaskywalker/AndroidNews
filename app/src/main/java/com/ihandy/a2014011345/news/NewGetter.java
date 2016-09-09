@@ -16,6 +16,10 @@ import java.util.List;
  * Created by hza on 16/9/4.
  */
 public class NewGetter{
+    /**
+     * 读取新闻
+     * 虽然这个类没啥用
+     */
     URLHandler urlHandler;
     public NewGetter(){
         urlHandler = new URLHandler();

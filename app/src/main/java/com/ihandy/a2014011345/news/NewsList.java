@@ -13,6 +13,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class NewsList implements Serializable{
+    /**
+     * 很多个新闻组成一个分类变成了列表。
+     * serializable用于直接存储到磁盘。
+     */
     public HashMap<String, New> news;
     public String category, title;
     public Boolean liked, watched;

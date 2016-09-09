@@ -24,6 +24,9 @@ import java.util.HashMap;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
 public class CategoryManager extends AppCompatActivity {
+    /**
+     * 标签管理的界面,通过点击checkbox控制是否观看该界面。
+     */
     private LayoutInflater inflater;
     public ArrayList<Boolean> watched;
     public ArrayList<Boolean> liked;

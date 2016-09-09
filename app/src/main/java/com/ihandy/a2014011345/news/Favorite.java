@@ -17,6 +17,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class Favorite extends AppCompatActivity {
+    /**
+     * 新闻收藏界面
+     */
     ArrayList<New> favoredNew;
     Button exitButton;
     ListView listView;
@@ -111,6 +114,7 @@ public class Favorite extends AppCompatActivity {
         Boolean checked = (data.getStringExtra("checked") .equals( "true" ));
         String news_id = data.getStringExtra("news_id");
         if(!checked){
+            MainActivity.favoredNew.get(news_id).isFavorite = false;
             MainActivity.favoredNew.remove(news_id);
             refresh();
         }
